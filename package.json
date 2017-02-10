@@ -1,0 +1,32 @@
+{
+  "name": "gallery-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "classnames": "^2.2.5",
+    "install": "^0.8.4",
+    "lodash": "^4.17.4",
+    "material-ui": "^0.16.7",
+    "moment": "^2.17.1",
+    "npm": "^4.1.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-paginate": "^4.1.1",
+    "react-redux": "^5.0.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^2.5.4",
+    "shortid": "^2.2.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

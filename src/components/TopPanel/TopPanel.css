@@ -1,0 +1,7 @@
+.TopPanel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+}
