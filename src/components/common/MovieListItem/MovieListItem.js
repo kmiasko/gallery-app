@@ -35,9 +35,17 @@ const MovieListItem = (props) => {
       <MenuItem onClick={toggleFavorite}>{ (favorite) ? 'Un-Favorite' : 'Favorite' } </MenuItem>
     </IconMenu>
   );
+
+  const play = (e) => {
+    const elemType = e.target.toString();
+    if (elemType === '[object SVGSVGElement]' || elemType === '[object HTMLButtonElement]') {
+      return null;
+    }
+    playMovie();
+  };
   return (
     <div className={classnames('MovieListItem', { 'MovieListItem--Favorite': favorite })}>
-      <ListItem innerDivStyle={listItemStyle} onClick={playMovie}
+      <ListItem innerDivStyle={listItemStyle} onClick={play}
         leftAvatar={<Avatar style={avatarStyle} size={88} src={thumbnail} />}
         primaryText={title}
         secondaryTextLines={2}
