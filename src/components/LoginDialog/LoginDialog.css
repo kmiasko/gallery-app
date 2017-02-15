@@ -1,0 +1,21 @@
+.LoginDialog {}
+
+.LoginDialog__Form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginDialog__Form__Buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 0 100%;
+  width: 40%;
+}
+
+.LoginDialog__Form--error {
+  color: red;
+}

@@ -4,3 +4,9 @@
   justify-content: center;
   width: 100%;
 }
+
+.ListContainer h2 {
+  text-align: center;
+  flex: 1 0 100%;
+  margin: 1em 0;
+}

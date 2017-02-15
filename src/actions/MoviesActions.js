@@ -1,28 +1,34 @@
 import config from '../config';
-import VideoDownloader from '../utils/VideoDownloader';
 import isEmpty from 'lodash/isEmpty';
+import axios from 'axios';
+import VideoDownloader from '../utils/VideoDownloader';
 
 import {
   MOVIE_TOGGLE_FAVORITE,
   DELETE_MOVIE,
-  CLEAR_MOVIES,
   ADD_MOVIE,
   PLAY_MOVIE,
   STOP_MOVIE,
+  LOAD_MOVIES,
 } from './types';
+
+export const toggleFavoriteOnServer = (id, shortid) => (dispatch) => {
+  axios.put(`/videos/${id}`)
+    .then(video => dispatch(toggleFavorite(shortid)));
+};
 
 export const toggleFavorite = shortid => ({
   type: MOVIE_TOGGLE_FAVORITE,
   id: shortid,
 });
 
+export const deleteMovieFromServer = (id, shortid) => (dispatch) =>
+  axios.delete(`/videos/${id}`)
+    .then(resp => dispatch(deleteMovie(shortid)));
+
 export const deleteMovie = shortid => ({
   type: DELETE_MOVIE,
   id: shortid,
-});
-
-export const clearMovies = () => ({
-  type: CLEAR_MOVIES,
 });
 
 export const addMovie = movie => ({
@@ -30,26 +36,29 @@ export const addMovie = movie => ({
   movie,
 });
 
+export const postMovieToDB = movie => (dispatch) =>
+  axios.post('/videos', {
+    ...movie
+  })
+  .then(resp => dispatch(addMovie(resp.data.video)));
+
 export const downloadMovies = input => (dispatch) => {
   VideoDownloader.download(input)
     .then((data) => {
       const movies = data.filter(item => !isEmpty(item));
-      movies.forEach(movie => dispatch(addMovie(movie)));
+      movies.forEach(movie => dispatch(postMovieToDB(movie)));
     })
     .catch(err => console.error(err));
 };
 
-export const loadMovies = () => (dispatch) => {
-  dispatch(clearMovies());
-  const movies = config.load;
-  const interval = setInterval(() => {
-    if (movies.length === 0) {
-      clearInterval(interval);
-    }
-    const movie = movies.shift();
-    dispatch(downloadMovies(movie));
-  }, 300);
-};
+export const getMoviesFromServer = () => (dispatch) =>
+  axios.get('/videos')
+    .then(resp => dispatch(loadMovies(resp.data.videos)));
+
+export const loadMovies = movies => ({
+  type: LOAD_MOVIES,
+  movies,
+});
 
 export const playMovie = shortid => ({
   type: PLAY_MOVIE,

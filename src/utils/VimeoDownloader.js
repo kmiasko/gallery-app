@@ -1,7 +1,8 @@
 import axios from 'axios';
-import config from '../config';
 import moment from 'moment';
 import shortid from 'shortid';
+import omit from 'lodash/omit';
+import config from '../config';
 
 class VimeoDownloader {
   constructor() {
@@ -43,12 +44,14 @@ class VimeoDownloader {
   authorize() {
     return axios.post(this.authorizationUrl,
       { grant_type: "client_credentials" },
-      { headers: {
+      {
+        headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': this.authHeader,
+          'x-auth': null,
         },
-      },
+      }
     );
   }
 
@@ -63,7 +66,6 @@ class VimeoDownloader {
     return {
       shortid: shortid.generate(),
       title: data.name,
-      date: moment().format(config.config.dateFormat),
       description: desc,
       favorite: false,
       views: parseInt(data.stats.plays, 10),
@@ -82,9 +84,9 @@ class VimeoDownloader {
     return this.authorize()
       .then(data => data.data.access_token)
       .then(token => axios.get(this.apiURL, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       }))
       .then(data => this.formatData(data.data));
   }

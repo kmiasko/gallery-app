@@ -5,7 +5,7 @@ import nth from 'lodash/nth';
 import MovieListItem from '../common/MovieListItem';
 import MovieCard from '../common/MovieCard';
 import { getMovies } from './selectors';
-import { toggleFavorite, deleteMovie } from '../../actions/MoviesActions';
+import { toggleFavoriteOnServer, deleteMovieFromServer, getMoviesFromServer } from '../../actions/MoviesActions';
 import { playMovie } from '../../actions/PlayerActions';
 import './Main.css';
 
@@ -13,6 +13,7 @@ const MoviesList = ({ movies, MovieContainer,
   toggleFavorite, deleteMovie, playMovie }) => {
   return (
     <div className="ListContainer">
+      <h2>Your movies</h2>
       { movies.map((movie, i) => (<MovieContainer
         key={i}
         toggleFavorite={toggleFavorite.bind(null, movie)}
@@ -45,12 +46,17 @@ class Main extends React.Component {
     this.playMovie = this.playMovie.bind(this);
   }
 
+  componentDidMount() {
+    this.props.getMoviesFromServer()
+      .catch(err => console.error(err.response.data));
+  }
+
   toggleFavorite(movie) {
-    this.props.toggleFavorite(movie.shortid);
+    this.props.toggleFavoriteOnServer(movie._id, movie.shortid);
   }
 
   deleteMovie(movie) {
-    this.props.deleteMovie(movie.shortid);
+    this.props.deleteMovieFromServer(movie._id, movie.shortid);
   }
 
   playMovie(movie) {
@@ -76,6 +82,8 @@ class Main extends React.Component {
 Main.propTypes = {
   layout: PropTypes.string.isRequired,
   movies: PropTypes.array.isRequired,
+  deleteMovieFromServer: PropTypes.func.isRequired,
+  toggleFavoriteOnServer: PropTypes.func.isRequired,
 };
 
 Main.defaultProps = {
@@ -88,7 +96,8 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-  toggleFavorite,
-  deleteMovie,
+  toggleFavoriteOnServer,
+  deleteMovieFromServer,
   playMovie,
+  getMoviesFromServer,
 })(Main);

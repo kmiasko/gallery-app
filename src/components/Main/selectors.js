@@ -5,8 +5,11 @@ const getFavoritesFilter = state => state.favorites;
 const getSortingValue = state => state.sorting;
 const getMoviesState = state => state.movies;
 
-const sortAsc = (a, b) => (moment(a.date).isSameOrBefore(b.date) ? -1 : 1);
-const sortDesc = (b, a) => (moment(a.date).isSameOrBefore(b.date) ? -1 : 1);
+const DESC = -1;
+const ASC = 1;
+
+const sortAsc = (a, b) => (moment(a.creationDate).isSameOrBefore(b.creationDate) ? DESC : ASC);
+const sortDesc = (b, a) => (moment(a.creationDate).isSameOrBefore(b.creationDate) ? DESC : ASC);
 
 export const getMovies = createSelector(
   [getMoviesState, getSortingValue, getFavoritesFilter],

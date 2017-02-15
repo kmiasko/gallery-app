@@ -5,6 +5,8 @@ import layout from './LayoutReducer';
 import movies from './MoviesReducer';
 import favorites from './FavoritesReducer';
 import player from './PlayerReducer';
+import feed from './FeedReducer';
+import login from './LoginReducer';
 
 export default combineReducers({
   pagination,
@@ -13,4 +15,6 @@ export default combineReducers({
   favorites,
   movies,
   player,
+  feed,
+  login,
 });

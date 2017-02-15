@@ -5,12 +5,15 @@ import IconButton from 'material-ui/IconButton';
 import Favorite from 'material-ui/svg-icons/action/favorite';
 import FavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import {red500} from 'material-ui/styles/colors';
+import moment from 'moment';
+import config from '../../../config';
 import './MovieCard.css';
 
 const MovieCard = (props) => {
-  const { title, date, likes = 0, views = 0, thumbnail,
+  const { title, creationDate, likes = 0, views = 0, thumbnail,
     description, favorite, toggleFavorite, deleteMovie,
     playMovie } = props;
+  const date = moment(creationDate).format(config.config.dateFormat);
   const subtitle = `Likes: ${likes} Views: ${views} Added: ${date}`;
   const cursorPointer = { cursor: 'pointer' };
   const cardActionsStyle = {
@@ -48,7 +51,7 @@ MovieCard.defaultProps = {
 
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  creationDate: PropTypes.string.isRequired,
   likes: PropTypes.number,
   views: PropTypes.number,
   thumbnail: PropTypes.string.isRequired,

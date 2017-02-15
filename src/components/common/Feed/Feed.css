@@ -1,0 +1,11 @@
+.Feed {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Feed h2 {
+  flex: 1 0 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+

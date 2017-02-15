@@ -122,10 +122,6 @@ class TopPanel extends React.Component {
           selected={this.props.favorites}
           onChange={this.handleSelectChange}
         />
-        <IconMenu iconButtonElement={iconButtonElement}>
-          <MenuItem onClick={() => this.props.loadMovies()}>Load movies</MenuItem>
-          <MenuItem onClick={() => this.props.clearMovies()}>Clear movies</MenuItem>
-        </IconMenu>
       </div>
     );
   }
@@ -136,8 +132,6 @@ TopPanel.propTypes = {
   perPage: PropTypes.string.isRequired,
   sorting: PropTypes.string.isRequired,
   favorites: PropTypes.string.isRequired,
-  clearMovies: PropTypes.func.isRequired,
-  loadMovies: PropTypes.func.isRequired,
   downloadMovies: PropTypes.func.isRequired,
 };
 
@@ -153,7 +147,5 @@ export default connect(mapStateToProps, {
   changePerPage,
   changeSorting,
   changeFavorites,
-  clearMovies,
   downloadMovies,
-  loadMovies,
 })(TopPanel);

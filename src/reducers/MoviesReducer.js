@@ -1,8 +1,8 @@
 import {
   MOVIE_TOGGLE_FAVORITE,
   DELETE_MOVIE,
-  CLEAR_MOVIES,
   ADD_MOVIE,
+  LOAD_MOVIES,
 } from '../actions/types';
 
 export default(state = [], action = {}) => {
@@ -27,8 +27,8 @@ export default(state = [], action = {}) => {
         ...state,
         action.movie,
       ];
-    case CLEAR_MOVIES:
-      return [];
+    case LOAD_MOVIES:
+      return action.movies;
     default:
       return state;
   }

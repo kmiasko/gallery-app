@@ -7,13 +7,15 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconButton from 'material-ui/IconButton';
 import {grey400} from 'material-ui/styles/colors';
 import classnames from 'classnames';
+import moment from 'moment';
+import config from '../../../config';
 import './MovieListItem.css';
 
-
 const MovieListItem = (props) => {
-  const { title, date, likes = 0, views = 0, thumbnail,
+  const { title, creationDate, likes = 0, views = 0, thumbnail,
     description, favorite, toggleFavorite, deleteMovie,
     playMovie } = props;
+  const date = moment(creationDate).format(config.config.dateFormat);
   const subtitle = `Likes: ${likes} Views: ${views} Added: ${date}`;
   const avatarStyle = {
     borderRadius: 0,
@@ -68,7 +70,7 @@ MovieListItem.defaultProps = {
 
 MovieListItem.propTypes = {
   title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  creationDate: PropTypes.string.isRequired,
   likes: PropTypes.number,
   views: PropTypes.number,
   thumbnail: PropTypes.string.isRequired,

@@ -47,7 +47,6 @@ class YoutubeDownloader {
       likes: parseInt(fetched.statistics.likeCount, 10),
       views: parseInt(fetched.statistics.viewCount, 10),
       favorite: false,
-      date: moment().format(config.config.dateFormat),
       embed: this.embed,
     };
   }
