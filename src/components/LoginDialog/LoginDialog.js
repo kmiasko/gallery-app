@@ -2,9 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
+import get from 'lodash/get';
 import { connect } from 'react-redux';
 import { sendLogin, hideDialog } from '../../actions/LoginActions';
 import './LoginDialog.css';
+
+const FORBIDDEN = 403;
+const BADREQUEST = 400;
 
 class LoginDialog extends React.Component {
   constructor() {
@@ -31,14 +35,15 @@ class LoginDialog extends React.Component {
 
     this.props.sendLogin(username, password)
       .catch(error => {
-        if (error.response.data.errors) {
+        const { statusCode, message } = get(error, 'response.data.error');
+        if (statusCode === BADREQUEST && message) {
           this.setState({
-            errors: error.response.data.errors,
+            errors: message,
           });
         }
-        if (error.response.data.error) {
+        if (statusCode === FORBIDDEN && message) {
           this.setState({
-            formError: error.response.data.error,
+            formError: message,
           });
         }
       });
