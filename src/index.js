@@ -10,6 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import debounce from 'lodash/debounce';
 import rootReducer from './reducers/rootReducer';
+import config from './config';
 
 import './index.css';
 
@@ -20,7 +21,7 @@ axios.interceptors.request.use(request => {
   return request;
 });
 
-axios.defaults.baseURL = 'http://localhost:8080/api';
+axios.defaults.baseURL = config.config.apiURL;
 
 // const LOCALSTORAGE_KEY = 'gallery';
 // let persistedState = {};

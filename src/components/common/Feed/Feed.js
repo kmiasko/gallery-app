@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import io from 'socket.io-client';
 import { getFeed, addFeedItem } from '../../../actions/FeedActions';
+import config from '../../../config';
 import './Feed.css';
 
 class Feed extends Component {
@@ -14,7 +15,7 @@ class Feed extends Component {
   componentDidMount() {
     this.props.getFeed()
       .then(() => {
-        this.socket = io('localhost:8080');
+        this.socket = io(config.config.socketHost);
         this.socket.on('new:video', this.newVideo);
       })
       .catch(err => console.error(err));
