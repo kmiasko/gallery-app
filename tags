@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.favoritesValueOptions = { '0': 'No', '1': 'Yes' };$/;"	p	class:favoritesValueOptions
+0	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.layoutOptions = { '0': 'Tiles', '1': 'List' };$/;"	p	class:layoutOptions
+0	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.sortValueOptions = { '0': 'Desc', '1': 'Asc' };$/;"	p	class:sortValueOptions
+1	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.favoritesValueOptions = { '0': 'No', '1': 'Yes' };$/;"	p	class:favoritesValueOptions
+1	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.layoutOptions = { '0': 'Tiles', '1': 'List' };$/;"	p	class:layoutOptions
+1	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.sortValueOptions = { '0': 'Desc', '1': 'Asc' };$/;"	p	class:sortValueOptions
+10	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.perPageValueOptions = { '5': '5', '10': '10', '20': '20', '50': '50', '100': '100' };$/;"	p	class:perPageValueOptions
+100	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.perPageValueOptions = { '5': '5', '10': '10', '20': '20', '50': '50', '100': '100' };$/;"	p	class:perPageValueOptions
+20	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.perPageValueOptions = { '5': '5', '10': '10', '20': '20', '50': '50', '100': '100' };$/;"	p	class:perPageValueOptions
+5	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.perPageValueOptions = { '5': '5', '10': '10', '20': '20', '50': '50', '100': '100' };$/;"	p	class:perPageValueOptions
+50	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.perPageValueOptions = { '5': '5', '10': '10', '20': '20', '50': '50', '100': '100' };$/;"	p	class:perPageValueOptions
+alignItems	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^    justifyContent: 'center',$/;"	p	class:const
+borderRadius	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^  const avatarStyle = {$/;"	p	class:const
+bottom	/home/kmiasko/workdir/gallery-app/src/components/Player/Player.js	/^    position: 'absolute',$/;"	p	class:const
+cursor	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^  const cursorPointer = { cursor: 'pointer' };$/;"	p	class:const
+display	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^  const cardActionsStyle = {$/;"	p	class:const
+error	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^      inputUrl: '',$/;"	p	class:state
+flexFlow	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^    display: 'flex',$/;"	p	class:const
+inputUrl	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    this.state = {$/;"	p	class:state
+justifyContent	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^    flexFlow: 'row nowrap',$/;"	p	class:const
+label	/home/kmiasko/workdir/gallery-app/src/components/common/Select/Select.js	/^Select.propTypes = {$/;"	p	class:Select.propTypes
+layout	/home/kmiasko/workdir/gallery-app/src/components/Main/Main.js	/^Main.propTypes = {$/;"	p	class:Main.propTypes
+layout	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^TopPanel.propTypes = {$/;"	p	class:TopPanel.propTypes
+layout	/home/kmiasko/workdir/gallery-app/src/reducers/LayoutReducer.js	/^const initialState = {$/;"	p	class:const
+left	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^    top: 0,$/;"	p	class:const
+likes	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^  views: 0,$/;"	p	class:MovieCard.defaultProps
+likes	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^  views: 0,$/;"	p	class:MovieListItem.defaultProps
+margin	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    const buttonStyle = { margin: '0 0.5em' };$/;"	p	class:render
+margin	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    const selectStyle = { margin: '0 0.5em', maxWidth: '7em' };$/;"	p	class:const
+marginRight	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^    left: 0,$/;"	p	class:const
+maxWidth	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    const selectStyle = { margin: '0 0.5em', maxWidth: '7em' };$/;"	p	class:const
+minWidth	/home/kmiasko/workdir/gallery-app/src/components/TopPanel/TopPanel.js	/^    const inputStyle = { minWidth: '5em' };$/;"	p	class:const
+movies	/home/kmiasko/workdir/gallery-app/src/components/Main/Main.js	/^Main.defaultProps = {$/;"	p	class:Main.defaultProps
+movies	/home/kmiasko/workdir/gallery-app/src/components/Main/Main.js	/^MoviesList.defaultProps = {$/;"	p	class:MoviesList.defaultProps
+movies	/home/kmiasko/workdir/gallery-app/src/components/Main/Main.js	/^MoviesList.propTypes = {$/;"	p	class:MoviesList.propTypes
+movies	/home/kmiasko/workdir/gallery-app/src/components/Player/Player.js	/^Player.defaultProps = {$/;"	p	class:Player.defaultProps
+paddingLeft	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^  const listItemStyle = { paddingLeft: '100px' };$/;"	p	class:const
+perPage	/home/kmiasko/workdir/gallery-app/src/components/Pagination/Pagination.js	/^Pagination.propTypes = {$/;"	p	class:Pagination.propTypes
+perPage	/home/kmiasko/workdir/gallery-app/src/reducers/LayoutReducer.js	/^  layout: '0',$/;"	p	class:const
+playing	/home/kmiasko/workdir/gallery-app/src/reducers/PlayerReducer.js	/^const initialState = {$/;"	p	class:const
+playingID	/home/kmiasko/workdir/gallery-app/src/reducers/PlayerReducer.js	/^  playing: false,$/;"	p	class:const
+position	/home/kmiasko/workdir/gallery-app/src/components/Player/Player.js	/^  const buttonStyle = {$/;"	p	class:const
+right	/home/kmiasko/workdir/gallery-app/src/components/Player/Player.js	/^    bottom: '5px',$/;"	p	class:const
+stopMovie	/home/kmiasko/workdir/gallery-app/src/components/Player/Player.js	/^Player.propTypes = {$/;"	p	class:Player.propTypes
+textAlign	/home/kmiasko/workdir/gallery-app/src/components/Player/Player.js	/^  const innerStyle = {$/;"	p	class:const
+title	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^MovieCard.propTypes = {$/;"	p	class:MovieCard.propTypes
+title	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^MovieListItem.propTypes = {$/;"	p	class:MovieListItem.propTypes
+top	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^    borderRadius: 0,$/;"	p	class:const
+views	/home/kmiasko/workdir/gallery-app/src/components/common/MovieCard/MovieCard.js	/^MovieCard.defaultProps = {$/;"	p	class:MovieCard.defaultProps
+views	/home/kmiasko/workdir/gallery-app/src/components/common/MovieListItem/MovieListItem.js	/^MovieListItem.defaultProps = {$/;"	p	class:MovieListItem.defaultProps
