@@ -7,7 +7,7 @@
 `https://www.youtube.com/watch?v=4JOAqRS_lms`
 `https://youtu.be/vJ3a_AuEW18` lub `https://vimeo.com/138882294`
 
-* identyfikatora filmu, czyli np.: vJ3a_AuEW18
+* identyfikatora filmu, czyli np.: `vJ3a_AuEW18`
 
 ### Filmy powinny byc wylistowane z danymi takimi jak:
 
